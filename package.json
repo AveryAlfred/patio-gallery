@@ -1,0 +1,7 @@
+{
+  "name": "patio-gallery",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
