@@ -1,5 +1,4 @@
 import express, { Request, Response } from 'express';
-import logger from './utils/logger';
 
 import { userRouter } from './user/user.router';
 import { sessionRouter } from './session/session.router';

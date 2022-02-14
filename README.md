@@ -1,8 +1,3 @@
-
-https://user-images.githubusercontent.com/89222654/153465496-ef83fb17-b441-4a51-b33b-45c14e94e561.mp4
-
-
-
 <br>
 
 ## Client side

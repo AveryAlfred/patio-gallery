@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
-import requireUser from '../utils/middleware/requireUser';
-import validateResource from '../utils/middleware/validateResource';
+import { requireUser } from '../utils/middleware/requireUser';
+import { validateResource } from '../utils/middleware/validateResource';
 import {
   createUserHandler,
   forgotPasswordHandler,
