@@ -20,9 +20,9 @@ Technology
 
 - React with Next.js - Rendering
 - React Context API - State management
-- Testing Library - Test library and runner
+- Testing Library - Testing
 - Zod - Validation
-- React Hook Form - Form construction and handling
+- React Hook Form - Form creation and handlers
 - dnd kit - Drag-and-drop components
 - styled components - CSS-in-JSS styling and animations
 
