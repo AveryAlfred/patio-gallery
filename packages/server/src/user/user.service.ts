@@ -1,13 +1,13 @@
-import 'dotenv/config';
-import logger from '../utils/logger';
-import { ddbClient } from '../utils/db';
-import { nanoid } from 'nanoid';
-import { CreateUserInput } from './user.schema';
+import config from 'config';
 import argon2 from 'argon2';
+import { nanoid } from 'nanoid';
+import logger from '../utils/logger';
 
+import { ddbClient } from '../utils/db';
+import { CreateUserInput } from './user.schema';
 import { User } from './user.model';
 
-const TABLE = process.env.TABLE;
+const table = config.get('db.table') as string
 
 export const createUser = async (input: CreateUserInput) => {
   
@@ -16,7 +16,7 @@ export const createUser = async (input: CreateUserInput) => {
 
   const user: User = {
     pk: userId,
-    sk: userId,
+    sk: input.email,
     email: input.email,
     name: input.name,
     verified: false,
@@ -26,7 +26,7 @@ export const createUser = async (input: CreateUserInput) => {
   };
 
   const params = {
-    TableName: TABLE,
+    TableName: table,
     Item: user,
   };
 
@@ -37,7 +37,7 @@ export const createUser = async (input: CreateUserInput) => {
 export const findUserById = async (input: string) => {
 
   const params = {
-    TableName: TABLE,
+    TableName: table,
     Key: {input},
   };
 
@@ -47,7 +47,7 @@ export const findUserById = async (input: string) => {
 
 export const findUserByEmail = async (input: string) => {
   const params = {
-    TableName: TABLE,
+    TableName: table,
     Key: {input},
   };
 

@@ -1,5 +1,3 @@
-_Patio Gallery is a project in progress._
-
 <br>
 
 ## Client side
