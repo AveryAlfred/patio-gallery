@@ -24,7 +24,7 @@ Technology
 - Zod - Validation
 - React Hook Form - Form creation and handlers
 - dnd kit - Drag-and-drop components
-- styled components - CSS-in-JSS styling and animations
+- styled components - CSS-in-JS styling and animations
 
 <br>
 
